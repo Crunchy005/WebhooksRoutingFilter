@@ -1,0 +1,20 @@
+{
+  "name": "WebhooksRoutingFilter",
+  "version": "1.1.5",
+  "description": "This routes incomming webhooks to a new destination based on a filter pattern for the payload",
+  "main": "WebhooksRoutingFilter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Corn",
+  "license": "MIT",
+  "dependencies": {
+    "json-filter": "0.0.2",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "Webhooks_Router"
+  }
+}
