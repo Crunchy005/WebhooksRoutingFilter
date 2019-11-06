@@ -1,5 +1,5 @@
 # WebhooksRoutingFilter
-###What it does
+### What it does
 
 ​	This module allows easy re-routing of webhooks request based on a json body.  It uses Json-Filter and fetch to match a request and send it to the provided URL.
 
@@ -21,7 +21,7 @@ My main use for this was to create an easy way to grab certain webhook requests 
 
 To create a filter pass in the json body of the webhooks request and an array of json objects containing the forwarding URL and the queryfilter.  The query filter uses [json-filter](https://www.npmjs.com/package/json-filter) to match the parameters in the request body and forward to the matching URL
 
-```json
+```
 [
     {
         "URL": "https://webhooks.myendpoint.com/route",
