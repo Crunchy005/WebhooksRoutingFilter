@@ -5,10 +5,12 @@ module.exports = function webhookRouterHandler (reqData, filterArray) {
     filterArray.forEach(element => {
         if(jsonFilter(reqData, element.query))
         {
-            let response = fetch(element.url, {
-                method: 'POST',
-                body: reqData
+            element.url.forEach(item => {
+                fetch(item, {
+                    method: 'POST',
+                    body: reqData
+                });
             });
-        } 
+        }
     });
 }

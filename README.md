@@ -24,7 +24,7 @@ To create a filter pass in the JSON body of the webhooks request and an array of
 ```
 [
     {
-        "URL": "https://webhooks.myendpoint.com/route",
+        "URL": ["https://webhooks.myendpoint.com/route"],
         "query":
         {
             Parameter1: "test",
@@ -43,7 +43,10 @@ var WebhooksRoutingFilter = require('WebhooksRoutingFilter');
 
 WebhooksRoutingFilter(req.body, [
             {
-                "url": "https://maker.ifttt.com/trigger/movie_started/with/key/{mykey}", 
+                "url": 
+                [
+                    "https://maker.ifttt.com/trigger/movie_started/with/key/{mykey}"
+                ], 
                 "query": 
                 {
                     event: { $only: ['media.play', 'media.resume'] },
@@ -54,7 +57,10 @@ WebhooksRoutingFilter(req.body, [
                 }
             },
             {
-                "url": "https://maker.ifttt.com/trigger/movie_paused/with/key/{MyKey}",
+                "url": 
+                [
+                    "https://maker.ifttt.com/trigger/movie_paused/with/key/{MyKey}"
+                ],
                 "query": 
                 { 
                     event: 
